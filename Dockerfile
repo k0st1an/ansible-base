@@ -3,6 +3,8 @@ FROM debian:12-slim
 LABEL maintainer="Konstantin Kruglov <kruglovk@gmail.com>"
 LABEL repository="github.com/k0st1an/ansible-base"
 
+COPY LICENSE README.md /
+
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
     nano python3-minimal python3-pip openssh-client
