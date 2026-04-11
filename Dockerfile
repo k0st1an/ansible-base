@@ -22,7 +22,7 @@ RUN mkdir ~/.ssh && chmod 0700 ~/.ssh && \
     printf "Host *\n  StrictHostKeyChecking=no" > ~/.ssh/config
 
 RUN echo "\n\
-    export EDITOR=nano\m\
+    export EDITOR=nano\n\
     export PAGER='cat'\n\
     PS1=\"\[\$(tput bold)\$(tput setaf 2)\][ \[\$(tput setaf 7)\]\\d, \\\t \[\$(tput setaf 2)\]] \[\$(tput setaf 1)\]>\[\$(tput sgr0)\] \"\n\
     HISTCONTROL=ignoredups\n\
