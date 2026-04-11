@@ -1,6 +1,6 @@
 .PHONY: build flow
 
-IMAGE_NAME=k0st1an/ansible-base:10
+IMAGE_NAME=k0st1an/ansible-base:13
 
 build:
 	docker build -t ${IMAGE_NAME} .

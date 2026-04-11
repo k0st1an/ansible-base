@@ -1,4 +1,4 @@
-FROM debian:12-slim
+FROM debian:13-slim
 
 LABEL maintainer="Konstantin Kruglov <kruglovk@gmail.com>"
 LABEL repository="github.com/k0st1an/ansible-base"
