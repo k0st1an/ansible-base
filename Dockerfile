@@ -8,7 +8,7 @@ COPY requirements.txt .
 
 RUN apt update && \
     DEBIAN_FRONTEND=noninteractive apt install -yq --no-install-recommends \
-    nano python3-minimal python3-pip openssh-client make
+    nano python3-minimal python3-pip openssh-client make iputils-ping
 
 RUN apt autoremove -y && \
     apt autoclean && \
