@@ -9,18 +9,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: checkout repository
-      uses: actions/checkout@master
+      uses: actions/checkout@v6
     - name: set up docker buildx
-      uses: docker/setup-buildx-action@master
+      uses: docker/setup-buildx-action@v4
     - name: log in to Docker Hub
-      uses: docker/login-action@master
+      uses: docker/login-action@v4
       with:
         username: ${{ secrets.DH_USERNAME }}
         password: ${{ secrets.DH_TOKEN }}
     - name: build and push
-      uses: docker/build-push-action@master
+      uses: docker/build-push-action@v7
       with:
         context: .
         platforms: linux/amd64,linux/arm64
         push: true
-        tags: k0st1an/ansible-base:10
+        tags: k0st1an/ansible-base:13
